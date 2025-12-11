@@ -1,0 +1,81 @@
+/* Design System - Design Tokens
+ * Source: docs/PRD.md#Visual-Identity-System, docs/tech-spec-epic-1.md#Data-Models-and-Contracts
+ * Story: 1-2-design-system-foundation
+ */
+
+:root {
+  /* Color Palette - Brand Colors */
+  --color-primary-ink: #2E2E2E; /* Anthracite - main text */
+  --color-bg-base: #FCFCFC; /* Cream White - main background */
+  --color-accent-rose: #D9BDBB; /* Dusty Rose - secondary buttons, banners, tags */
+  --color-neutral-surface: #EAEAEA; /* Light Gray - card backgrounds, borders */
+
+  /* Typography - Font Families */
+  --font-primary: "Libre Baskerville", "Times New Roman", serif;
+  --font-secondary: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Typography - Font Sizes (Desktop) */
+  --font-size-h1: 48px; /* Range: 40-48px */
+  --font-size-h2: 32px; /* Range: 30-32px */
+  --font-size-h3: 24px;
+  --font-size-body: 17px; /* Range: 16-18px */
+  --font-size-caption: 12px;
+  
+  /* Typography - Line Heights */
+  --line-height-h1: 1.1;
+  --line-height-h2: 1.2;
+  --line-height-h3: 1.3;
+  --line-height-body: 1.6;
+  --line-height-caption: 1.4;
+
+  /* Spacing Scale (8px base unit) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-2xl: 64px;
+  --spacing-3xl: 72px;
+
+  /* Responsive Breakpoints */
+  --breakpoint-mobile: 768px; /* mobile < 768px */
+  --breakpoint-tablet: 1024px; /* tablet 768-1023px, desktop >= 1024px */
+  --breakpoint-desktop: 1024px; /* desktop >= 1024px */
+
+  /* Semantic Colors (for states) */
+  --color-error: #C45555; /* Error state for forms and critical actions */
+  --color-success: #3C8C74; /* Success state for confirmations */
+  --color-warning: #D9A75A; /* Warning state for non-blocking notices */
+  --color-border-strong: #C8C8C8; /* Focus rings, key structural dividers */
+
+  /* Interactive States - Hover Colors */
+  --color-primary-ink-hover: #1a1a1a; /* Darker shade for primary button hover */
+  --color-accent-rose-hover: #c5a8a6; /* Lighter shade for secondary button hover */
+
+  /* Shadows */
+  --shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.08); /* Elevated card shadow */
+}
+
+/* Responsive Typography */
+/* Mobile: Scale down by ~20% from desktop, ensure minimum 14px for body text */
+@media (max-width: 767px) {
+  :root {
+    --font-size-body: 14px; /* ~20% reduction from 17px (min 14px) */
+    --font-size-h1: clamp(38px, 8vw, 48px); /* ~20% reduction from 48px */
+    --font-size-h2: clamp(26px, 6vw, 32px); /* ~20% reduction from 32px */
+    --font-size-h3: clamp(19px, 5vw, 24px); /* ~20% reduction from 24px */
+    --font-size-caption: clamp(10px, 2.5vw, 12px); /* ~20% reduction from 12px */
+  }
+}
+
+/* Tablet: Scale down by ~10% from desktop */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --font-size-h1: clamp(43px, 6vw, 48px); /* ~10% reduction from 48px */
+    --font-size-h2: clamp(29px, 4vw, 32px); /* ~10% reduction from 32px */
+    --font-size-h3: clamp(22px, 3vw, 24px); /* ~10% reduction from 24px */
+    --font-size-body: 15px; /* ~10% reduction from 17px */
+  }
+}
+
