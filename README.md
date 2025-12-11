@@ -1,8 +1,8 @@
-# =====================================================
+# ==========================================
 
 # D3MO — CINEMATIC COMMERCE FRAMEWORK
 
-# =====================================================
+# ==========================================
 
 A modular, high-performance e-commerce platform designed for premium fragrance & beauty experiences.
 Built with Nuxt 4, Vue 3, TypeScript, and a headless multi-service architecture, D3MO delivers cinematic UX and full commercial functionality.
